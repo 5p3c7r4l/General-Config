@@ -1,0 +1,52 @@
+general {
+        colors = false
+        interval = 1
+        markup = pango
+        separator = false
+}
+
+order += "volume master"
+order += "disk /"
+order += "load"
+order += "memory"
+order += "wireless wlan0"
+order += "time"
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+        hide_if_equals_localtime = true
+}
+
+load {
+        align = "center"
+        format = "<span foreground= '#5B3E8E'>░▒▓</span><span background= '#5B3E8E'>⎝ ❱ load time: %5min ⎞</span><span foreground= '#5B3E8E'>▓▒░</span>"
+}
+
+memory {
+        format = "<span></span><span background='#813BAC'>⎝ %used ⎞</span><span foreground= '#813BAC'>▓▒░</span>"
+}
+
+disk "/" {
+        format = "<span foreground= '#813BAC'>░▒▓</span><span background = '#813BAC'>⎝ 🖴 disk: %free ⎞</span><span foreground= '#813BAC'>▓▒░</span>"
+}
+
+wireless wlan0 {
+    format_up = "<span foreground= '#261A47'>░▒▓</span><span background = '#261A47'>⎝🌐 quality: %quality  𝌕 bitrate: %bitrate ⎞</span><span foreground= '#261A47'>▓▒░</span>"
+}
+
+memory {
+        format = "<span foreground= '#3D2A71'>░▒▓</span><span background = '#3D2A71'>⎝ ⑄ memory: %used ⎞</span><span foreground= '#3D2A71'>▓▒░</span>"
+        format_degraded = "MEMORY: %free"
+}
+
+time {
+    align = "center"
+        format = "<span foreground= '#272A2E'>░▒▓</span><span background='#272A2E'>⎝ⴵ %Y-%m-%d %H:%M ⎞</span><span foreground= '#272A2E'>▓▒░</span>"
+}
+
+volume master {
+        format = "<span foreground= '#48567D'>░▒▓</span><span background='#48567D'>⎝⍠𝅘𝅥𝅮𝅘𝅥𝅘𝅥𝅯 %volume ⎞</span><span foreground= '#48567D'>▓▒░</span>"
+        format_muted = "<span foreground= '#48567D'>░▒▓</span><span background='#48567D'>⎝⍠ %volume ⎞</span><span foreground= '#48567D'>▓▒░</span>"
+        device = "default"
+        mixer = "Master"
+    }
