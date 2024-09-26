@@ -187,7 +187,7 @@ bindsym $mod+r mode "resize"
 ###########################################################################################################################
 
 bar {
-        status_command i3status -c ~/.config/i3status/config
+        status_command i3status -c ~/.config/i3status/config-i3bar
         i3bar_command i3bar --transparency
         colors {
             background #00000000
