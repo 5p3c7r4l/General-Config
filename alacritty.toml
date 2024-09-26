@@ -1,0 +1,77 @@
+live_config_reload = true
+
+[env]
+
+
+[window]
+
+
+dimensions = {columns = 3, lines = 3}
+
+padding = {x = 20, y = 40}
+dynamic_padding = true
+
+decorations = "None"
+
+opacity = 0.8
+
+title = "Gene5is"
+
+resize_increments = true
+
+
+[font]
+
+
+normal = { family = 'PlayMeGames', style = 'Regular'}
+
+size = 11
+
+offset = { x = 0, y = 0}
+
+glyph_offset = { x = 0, y = -1}
+
+builtin_box_drawing = true
+
+
+[colors]
+
+
+#PALETTE_COLOR_1 = '#A519E0'
+#PALETTE_COLOR_2 = '#7624B5'
+#PALETTE_COLOR_3 = '#C0C0C0'
+#PALETTE_COLOR_4 = '#3040C9'
+#PALETTE_COLOR_5 = '#663EC9'
+
+#PALETTE_COLOR_6 = '#0E0D14'
+#PALETTE_COLOR_7 = '#813E94'
+#PALETTE_COLOR_8 = '#808080'
+
+cursor = { text = '#813E94', cursor = '#808080'}
+
+[colors.primary]
+
+foreground = '#813E94'
+
+background = '#0E0D14'
+
+
+[cursor]
+
+style = { shape = 'Underline', blinking = 'Never'}
+
+thickness = 0.2
+
+
+[mouse]
+
+hide_when_typing = true
+
+
+[keyboard]
+
+bindings = [{key = 'j', mods = 'None', mode = 'Vi', action ='Left'},
+{key = 'k', mods = 'None', mode = 'Vi', action ='Down'},
+{key = 'l', mods = 'None', mode = 'Vi', action ='Up'},
+{key = ';', mods = 'None', mode = 'Vi', action ='Right'},
+]
