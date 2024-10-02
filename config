@@ -286,6 +286,7 @@ bindsym $mod+Ctrl+b exec --no-startup-id kill -9 $(pgrep picom)
 bindsym $mod+Shift+f exec glava
 bindsym $mod+Ctrl+f exec --no-startup-id kill -9 $(pgrep glava)
 bindsym $mod+Shift+m exec --no-startup-id parallel 'alacritty -e' ::: cava $(nohup youtube-music &>/dev/null &)
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock
 
 
 ###########################################################################################################################
