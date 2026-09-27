@@ -1,17 +1,142 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: Minecraft,FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
 }
 
 window#waybar {
+  background:
+  /*static button background*/
+  linear-gradient(45deg,
+  rgba(82,82,82, 0) 45%,
+  rgba(82,82,82, 1) 45%,
+  rgba(82,82,82, 1) 61%,
+  rgba(82,82,82, 0) 61%
+  ),
+  linear-gradient(135deg,
+  rgba(82,82,82, 0) 39%,
+  rgba(82,82,82, 1) 39%,
+  rgba(82,82,82, 1) 55%,
+  rgba(82,82,82, 0) 55%
+  ),
+
+  /*animated empty area*/
+  linear-gradient(135deg,
+  rgba(82,82,82, 0) 0%,
+  rgba(82,82,82, 1) 0%,
+  rgba(82,82,82, 1) 2.5%,
+  rgba(82,82,82, 0) 2.5%,
+
+  rgba(168, 168, 168, 0) 0%,
+  rgba(168, 168, 168, 1) 0%,
+  rgba(168, 168, 168, 1) 2.5%,
+  rgba(168, 168, 168, 0) 2.5%,
+
+  rgba(168, 168, 168, 0) 5%,
+  rgba(168, 168, 168, 1) 5%,
+  rgba(168, 168, 168, 1) 7.5%,
+  rgba(168, 168, 168, 0) 7.5%,
+
+  rgba(168, 168, 168, 0) 10%,
+  rgba(168, 168, 168, 1) 10%,
+  rgba(168, 168, 168, 1) 12.5%,
+  rgba(168, 168, 168, 0) 12.5%,
+
+  rgba(168, 168, 168, 0) 15%,
+  rgba(168, 168, 168, 1) 15%,
+  rgba(168, 168, 168, 1) 17.5%,
+  rgba(168, 168, 168, 0) 17.5%,
+
+  rgba(168, 168, 168, 0) 20%,
+  rgba(168, 168, 168, 1) 20%,
+  rgba(168, 168, 168, 1) 22.5%,
+  rgba(168, 168, 168, 0) 22.5%,
+
+  rgba(168, 168, 168, 0) 25%,
+  rgba(168, 168, 168, 1) 25%,
+  rgba(168, 168, 168, 1) 27.5%,
+  rgba(168, 168, 168, 0) 27.5%,
+
+  rgba(168, 168, 168, 0) 30%,
+  rgba(168, 168, 168, 1) 30%,
+  rgba(168, 168, 168, 1) 32.5%,
+  rgba(168, 168, 168, 0) 32.5%,
+
+  rgba(168, 168, 168, 0) 35%,
+  rgba(168, 168, 168, 1) 35%,
+  rgba(168, 168, 168, 1) 37.5%,
+  rgba(168, 168, 168, 0) 37.5%
+  ),
+
+  linear-gradient(45deg,
+
+  rgba(168, 168, 168, 0) 62.5%,
+  rgba(168, 168, 168, 1) 62.5%,
+  rgba(168, 168, 168, 1) 65%,
+  rgba(168, 168, 168, 0) 65%,
+
+  rgba(168, 168, 168, 0) 67.5%,
+  rgba(168, 168, 168, 1) 67.5%,
+  rgba(168, 168, 168, 1) 70%,
+  rgba(168, 168, 168, 0) 70%,
+
+  rgba(168, 168, 168, 0) 72.5%,
+  rgba(168, 168, 168, 1) 72.5%,
+  rgba(168, 168, 168, 1) 75%,
+  rgba(168, 168, 168, 0) 75%,
+
+  rgba(168, 168, 168, 0) 77.5%,
+  rgba(168, 168, 168, 1) 77.5%,
+  rgba(168, 168, 168, 1) 80%,
+  rgba(168, 168, 168, 0) 80%,
+
+  rgba(168, 168, 168, 0) 82.5%,
+  rgba(168, 168, 168, 1) 82.5%,
+  rgba(168, 168, 168, 1) 85%,
+  rgba(168, 168, 168, 0) 85%,
+
+  rgba(168, 168, 168, 0) 87.5%,
+  rgba(168, 168, 168, 1) 87.5%,
+  rgba(168, 168, 168, 1) 90%,
+  rgba(168, 168, 168, 0) 90%,
+
+  rgba(168, 168, 168, 0) 92.5%,
+  rgba(168, 168, 168, 1) 92.5%,
+  rgba(168, 168, 168, 1) 95%,
+  rgba(168, 168, 168, 0) 95%,
+
+  rgba(168, 168, 168, 0) 97.5%,
+  rgba(168, 168, 168, 1) 97.5%,
+  rgba(168, 168, 168, 1) 100%,
+  rgba(168, 168, 168, 0) 100%,
+
+  rgba(168, 168, 168, 0) 97.5%,
+  rgba(168, 168, 168, 1) 97.5%,
+  rgba(168, 168, 168, 1) 100%,
+  rgba(168, 168, 168, 0) 100%
+  );
+
+    border-bottom: 2px solid rgba(82,82,82, 0.25);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    animation: barAnimation 5s linear infinite;
+}
+
+@keyframes barAnimation {
+  0% {
     background:
     /*static button background*/
     linear-gradient(45deg,
     rgba(82,82,82, 0) 45%,
     rgba(82,82,82, 1) 45%,
     rgba(82,82,82, 1) 61%,
-    rgba(82,82,82, 0) 61%
+    rgba(82,82,82, 0) 61%,
+    
+    rgba(82,82,82, 0) 97.5%,
+    rgba(82,82,82, 1) 97.5%,
+    rgba(82,82,82, 1) 100%,
+    rgba(82,82,82, 0) 100%
     ),
     linear-gradient(135deg,
     rgba(82,82,82, 0) 39%,
@@ -22,10 +147,10 @@ window#waybar {
 
     /*animated empty area*/
     linear-gradient(135deg,
-    rgba(168, 168, 168, 0) 0%,
-    rgba(168, 168, 168, 1) 0%,
-    rgba(168, 168, 168, 1) 0%,
-    rgba(168, 168, 168, 0) 0%,
+    rgba(82,82,82, 0) 0%,
+    rgba(82,82,82, 1) 0%,
+    rgba(82,82,82, 1) 2.5%,
+    rgba(82,82,82, 0) 2.5%,
 
     rgba(168, 168, 168, 0) 0%,
     rgba(168, 168, 168, 1) 0%,
@@ -108,18 +233,238 @@ window#waybar {
     rgba(168, 168, 168, 0) 97.5%,
     rgba(168, 168, 168, 1) 97.5%,
     rgba(168, 168, 168, 1) 100%,
-    rgba(168, 168, 168, 0) 100%,
+    rgba(168, 168, 168, 0) 100%
 
-    rgba(168, 168, 168, 0) 100%,
-    rgba(168, 168, 168, 1) 100%,
+    );
+  }
+
+  50% {
+    background:
+    /*static button background*/
+    linear-gradient(45deg,
+    rgba(168, 168, 168, 0) 45%,
+    rgba(168, 168, 168, 1) 45%,
+    rgba(168, 168, 168, 1) 61%,
+    rgba(168, 168, 168, 0) 61%,
+
+    rgba(168, 168, 168, 0) 97.5%,
+    rgba(168, 168, 168, 1) 97.5%,
     rgba(168, 168, 168, 1) 100%,
     rgba(168, 168, 168, 0) 100%
+    ),
+    linear-gradient(135deg,
+    rgba(168, 168, 168, 0) 39%,
+    rgba(168, 168, 168, 1) 39%,
+    rgba(168, 168, 168, 1) 55%,
+    rgba(168, 168, 168, 0) 55%
+    ),
+
+    /*animated empty area*/
+    linear-gradient(135deg,
+    rgba(168, 168, 168, 0) 0%,
+    rgba(168, 168, 168, 1) 0%,
+    rgba(168, 168, 168, 1) 2.5%,
+    rgba(168, 168, 168, 0) 2.5%,
+
+    rgba(168, 168, 168, 0) 2.5%,
+    rgba(168, 168, 168, 0.2) 2.5%,
+    rgba(168, 168, 168, 0.2) 5%,
+    rgba(168, 168, 168, 0) 5%,
+
+    rgba(168, 168, 168, 0) 7.5%,
+    rgba(168, 168, 168, 0.2) 7.5%,
+    rgba(168, 168, 168, 0.2) 10%,
+    rgba(168, 168, 168, 0) 10%,
+
+    rgba(168, 168, 168, 0) 12.5%,
+    rgba(168, 168, 168, 0.2) 12.5%,
+    rgba(168, 168, 168, 0.2) 15%,
+    rgba(168, 168, 168, 0) 15%,
+
+    rgba(168, 168, 168, 0) 17.5%,
+    rgba(168, 168, 168, 0.2) 17.5%,
+    rgba(168, 168, 168, 0.2) 20%,
+    rgba(168, 168, 168, 0) 20%,
+
+    rgba(168, 168, 168, 0) 22.5%,
+    rgba(168, 168, 168, 0.2) 22.5%,
+    rgba(168, 168, 168, 0.2) 25%,
+    rgba(168, 168, 168, 0) 25%,
+
+    rgba(168, 168, 168, 0) 27.5%,
+    rgba(168, 168, 168, 0.2) 27.5%,
+    rgba(168, 168, 168, 0.2) 30%,
+    rgba(168, 168, 168, 0) 30%,
+
+    rgba(168, 168, 168, 0) 32.5%,
+    rgba(168, 168, 168, 0.2) 32.5%,
+    rgba(168, 168, 168, 0.2) 35%,
+    rgba(168, 168, 168, 0) 35%,
+
+    rgba(168, 168, 168, 0) 37.5%,
+    rgba(168, 168, 168, 0.2) 37.5%,
+    rgba(168, 168, 168, 0.2) 40%,
+    rgba(168, 168, 168, 0) 40%
+    ),
+
+    linear-gradient(45deg,
+
+    rgba(168, 168, 168, 0) 60%,
+    rgba(168, 168, 168, 0.2) 60%,
+    rgba(168, 168, 168, 0.2) 62.5%,
+    rgba(168, 168, 168, 0) 62.5%,
+
+    rgba(168, 168, 168, 0) 65%,
+    rgba(168, 168, 168, 0.2) 65%,
+    rgba(168, 168, 168, 0.2) 67.5%,
+    rgba(168, 168, 168, 0) 67.5%,
+
+    rgba(168, 168, 168, 0) 70%,
+    rgba(168, 168, 168, 0.2) 70%,
+    rgba(168, 168, 168, 0.2) 72.5%,
+    rgba(168, 168, 168, 0) 72.5%,
+
+    rgba(168, 168, 168, 0) 75%,
+    rgba(168, 168, 168, 0.2) 75%,
+    rgba(168, 168, 168, 0.2) 77.5%,
+    rgba(168, 168, 168, 0) 77.5%,
+
+    rgba(168, 168, 168, 0) 80%,
+    rgba(168, 168, 168, 0.2) 80%,
+    rgba(168, 168, 168, 0.2) 82.5%,
+    rgba(168, 168, 168, 0) 82.5%,
+
+    rgba(168, 168, 168, 0) 85%,
+    rgba(168, 168, 168, 0.2) 85%,
+    rgba(168, 168, 168, 0.2) 87.5%,
+    rgba(168, 168, 168, 0) 87.5%,
+
+    rgba(168, 168, 168, 0) 90%,
+    rgba(168, 168, 168, 0.2) 90%,
+    rgba(168, 168, 168, 0.2) 92.5%,
+    rgba(168, 168, 168, 0) 92.5%,
+
+    rgba(168, 168, 168, 0) 95%,
+    rgba(168, 168, 168, 0.2) 95%,
+    rgba(168, 168, 168, 0.2) 97.5%,
+    rgba(168, 168, 168, 0) 97.5%
     );
 
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+  }
+
+  100% {
+    background:
+    /*static button background*/
+    linear-gradient(45deg,
+    rgba(82,82,82, 0) 45%,
+    rgba(82,82,82, 1) 45%,
+    rgba(82,82,82, 1) 61%,
+    rgba(82,82,82, 0) 61%,
+
+    rgba(82,82,82, 0) 97.5%,
+    rgba(82,82,82, 1) 97.5%,
+    rgba(82,82,82, 1) 100%,
+    rgba(82,82,82, 0) 100%
+    ),
+    linear-gradient(135deg,
+    rgba(82,82,82, 0) 39%,
+    rgba(82,82,82, 1) 39%,
+    rgba(82,82,82, 1) 55%,
+    rgba(82,82,82, 0) 55%
+    ),
+
+    /*animated empty area*/
+    linear-gradient(135deg,
+    rgba(82,82,82, 0) 0%,
+    rgba(82,82,82, 1) 0%,
+    rgba(82,82,82, 1) 2.5%,
+    rgba(82,82,82, 0) 2.5%,
+
+    rgba(168, 168, 168, 0) 5%,
+    rgba(168, 168, 168, 1) 5%,
+    rgba(168, 168, 168, 1) 7.5%,
+    rgba(168, 168, 168, 0) 7.5%,
+
+    rgba(168, 168, 168, 0) 10%,
+    rgba(168, 168, 168, 1) 10%,
+    rgba(168, 168, 168, 1) 12.5%,
+    rgba(168, 168, 168, 0) 12.5%,
+
+    rgba(168, 168, 168, 0) 15%,
+    rgba(168, 168, 168, 1) 15%,
+    rgba(168, 168, 168, 1) 17.5%,
+    rgba(168, 168, 168, 0) 17.5%,
+
+    rgba(168, 168, 168, 0) 20%,
+    rgba(168, 168, 168, 1) 20%,
+    rgba(168, 168, 168, 1) 22.5%,
+    rgba(168, 168, 168, 0) 22.5%,
+
+    rgba(168, 168, 168, 0) 25%,
+    rgba(168, 168, 168, 1) 25%,
+    rgba(168, 168, 168, 1) 27.5%,
+    rgba(168, 168, 168, 0) 27.5%,
+
+    rgba(168, 168, 168, 0) 30%,
+    rgba(168, 168, 168, 1) 30%,
+    rgba(168, 168, 168, 1) 32.5%,
+    rgba(168, 168, 168, 0) 32.5%,
+
+    rgba(168, 168, 168, 0) 35%,
+    rgba(168, 168, 168, 1) 35%,
+    rgba(168, 168, 168, 1) 37.5%,
+    rgba(168, 168, 168, 0) 37.5%,
+
+    rgba(168, 168, 168, 0) 40%,
+    rgba(168, 168, 168, 1) 40%,
+    rgba(168, 168, 168, 1) 42.5%,
+    rgba(168, 168, 168, 0) 42.5%
+    ),
+
+    linear-gradient(45deg,
+
+    rgba(168, 168, 168, 0) 57.5%,
+    rgba(168, 168, 168, 1) 57.5%,
+    rgba(168, 168, 168, 1) 60%,
+    rgba(168, 168, 168, 0) 60%,
+
+    rgba(168, 168, 168, 0) 62.5%,
+    rgba(168, 168, 168, 1) 62.5%,
+    rgba(168, 168, 168, 1) 65%,
+    rgba(168, 168, 168, 0) 65%,
+
+    rgba(168, 168, 168, 0) 67.5%,
+    rgba(168, 168, 168, 1) 67.5%,
+    rgba(168, 168, 168, 1) 70%,
+    rgba(168, 168, 168, 0) 70%,
+
+    rgba(168, 168, 168, 0) 72.5%,
+    rgba(168, 168, 168, 1) 72.5%,
+    rgba(168, 168, 168, 1) 75%,
+    rgba(168, 168, 168, 0) 75%,
+
+    rgba(168, 168, 168, 0) 77.5%,
+    rgba(168, 168, 168, 1) 77.5%,
+    rgba(168, 168, 168, 1) 80%,
+    rgba(168, 168, 168, 0) 80%,
+
+    rgba(168, 168, 168, 0) 82.5%,
+    rgba(168, 168, 168, 1) 82.5%,
+    rgba(168, 168, 168, 1) 85%,
+    rgba(168, 168, 168, 0) 85%,
+
+    rgba(168, 168, 168, 0) 87.5%,
+    rgba(168, 168, 168, 1) 87.5%,
+    rgba(168, 168, 168, 1) 90%,
+    rgba(168, 168, 168, 0) 90%,
+
+    rgba(168, 168, 168, 0) 92.5%,
+    rgba(168, 168, 168, 1) 92.5%,
+    rgba(168, 168, 168, 1) 95%,
+    rgba(168, 168, 168, 0) 95%
+    );
+
+  }
 }
 
 window#waybar.hidden {
@@ -136,11 +481,15 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: #3F3F3F;
+    border-top: #3F3F3F 4px inset;
+    border-bottom: #3F3F3F 1px inset;
+    margin-bottom: 2px;
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    border-top: #000000 4px inset;
+    border-bottom: #000000 1px inset;
+    margin-bottom: 2px;
     border: none;
 }
 
@@ -160,7 +509,9 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    border-top: #a37800 4px inset;
+    border-bottom: #a37800 1px inset;
+    margin-bottom: 2px;
 }
 
 #workspaces button {
@@ -174,43 +525,28 @@ button:hover {
 }
 
 #workspaces button.focused, #workspaces button.active {
-    background-color: #64727D;
+    border-top: #64727D 4px inset;
+    border-bottom: #64727D 1px inset;
+    margin-bottom: 2px;
     box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    border-top: #eb4d4b 4px inset;
+    border-bottom: #eb4d4b 1px inset;
+    margin-bottom: 2px;
 }
 
 #mode {
-    background-color: #64727D;
+    border-top: #64727D 4px inset;
+    border-bottom: #64727D 1px inset;
+    margin-bottom: 2px;
     box-shadow: inset 0 -3px #ffffff;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -224,17 +560,23 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    border-top: #64727D 4px inset;
+    border-bottom: #64727D 1px inset;
+    margin-bottom: 2px;
 }
 
 #battery {
-    background-color: #ffffff;
+    border-top: #ffffff 4px inset;
+    border-bottom: #ffffff 1px inset;
+    margin-bottom: 2px;
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    border-top: #26A65B 4px inset;
+    border-bottom: #26A65B 1px inset;
+    margin-bottom: 2px;
 }
 
 @keyframes blink {
@@ -260,92 +602,132 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
+    border-top: #f53c3c 4px inset;
+    border-bottom: #f53c3c 1px inset;
+    margin-bottom: 2px;
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    border-top: #2980b9 4px inset;
+    border-bottom: #2980b9 1px inset;
+    margin-bottom: 2px;
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
+    border-top: #2ecc71 4px inset;
+    border-bottom: #2ecc71 1px inset;
+    margin-bottom: 2px;
     color: #000000;
 }
 
 label:focus {
-    background-color: #000000;
+    border-top: #000000 4px inset;
+    border-bottom: #000000 1px inset;
+    margin-bottom: 2px;
 }
 
 #cpu {
-    background-color: #2ecc71;
+    border-top: #2ecc71 4px inset;
+    border-bottom: #2ecc71 1px inset;
+    margin-bottom: 2px;
     color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
+    border-top: #9b59b6 4px inset;
+    border-bottom: #9b59b6 1px inset;
+    margin-bottom: 2px;
 }
 
 #disk {
-    background-color: #964B00;
+    border-top: #964B00 4px inset;
+    border-bottom: #964B00 1px inset;
+    margin-bottom: 2px;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    border-top: #90b1b1 4px inset;
+    border-bottom: #90b1b1 1px inset;
+    margin-bottom: 2px;
 }
 
 #network {
-    background-color: #2980b9;
+    border-top: #2980b9 4px inset;
+    border-bottom: #2980b9 1px inset;
+    margin-bottom: 2px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    border-top: #f53c3c 4px inset;
+    border-bottom: #f53c3c 1px inset;
+    margin-bottom: 2px;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    border-top: #f1c40f 4px inset;
+    border-bottom: #f1c40f 1px inset;
+    margin-bottom: 2px;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    border-top: #90b1b1 4px inset;
+    border-bottom: #90b1b1 1px inset;
+    margin-bottom: 2px;
     color: #2a5c45;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
+    border-top: #fff0f5 4px inset;
+    border-bottom: #fff0f5 1px inset;
+    margin-bottom: 2px;
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    border-top: #f53c3c 4px inset;
+    border-bottom: #f53c3c 1px inset;
+    margin-bottom: 2px;
 }
 
 #custom-media {
-    background-color: #66cc99;
+    border-top: #66cc99 4px inset;
+    border-bottom: #66cc99 1px inset;
+    margin-bottom: 2px;
     color: #2a5c45;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    border-top: #66cc99 4px inset;
+    border-bottom: #66cc99 1px inset;
+    margin-bottom: 2px;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    border-top: #ffa000 4px inset;
+    border-bottom: #ffa000 1px inset;
+    margin-bottom: 2px;
 }
 
 #temperature {
-    background-color: #f0932b;
+    border-top: #f0932b 4px inset;
+    border-bottom: #f0932b 1px inset;
+    margin-bottom: 2px;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    border-top: #eb4d4b 4px inset;
+    border-bottom: #eb4d4b 1px inset;
+    margin-bottom: 2px;
 }
 
 #tray {
-    background-color: #2980b9;
+    border-top: #2980b9 4px inset;
+    border-bottom: #2980b9 1px inset;
+    margin-bottom: 2px;
 }
 
 #tray > .passive {
@@ -354,37 +736,53 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    border-top: #eb4d4b 4px inset;
+    border-bottom: #eb4d4b 1px inset;
+    margin-bottom: 2px;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    border-top: #2d3436 4px inset;
+    border-bottom: #2d3436 1px inset;
+    margin-bottom: 2px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    border-top: #ecf0f1 4px inset;
+    border-bottom: #ecf0f1 1px inset;
+    margin-bottom: 2px;
     color: #2d3436;
 }
 
 #mpd {
-    background-color: #66cc99;
+    border-top: #66cc99 4px inset;
+    border-bottom: #66cc99 1px inset;
+    margin-bottom: 2px;
     color: #2a5c45;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    border-top: #f53c3c 4px inset;
+    border-bottom: #f53c3c 1px inset;
+    margin-bottom: 2px;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    border-top: #90b1b1 4px inset;
+    border-bottom: #90b1b1 1px inset;
+    margin-bottom: 2px;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    border-top: #51a37a 4px inset;
+    border-bottom: #51a37a 1px inset;
+    margin-bottom: 2px;
 }
 
 #language {
-    background: #00b093;
+    border-top: #00b093 4px inset;
+    border-bottom: #00b093 1px inset;
+    margin-bottom: 2px;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -392,7 +790,9 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
+    border-top: #97e1ad 4px inset;
+    border-bottom: #97e1ad 1px inset;
+    margin-bottom: 2px;
     color: #000000;
     padding: 0 0px;
     margin: 0 5px;
@@ -434,4 +834,41 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+@keyframes font_color {
+  0% {
+    color: #cfcfcf;
+  }
+  50% {
+    color: #303030;
+  }
+  100% {
+    color: #cfcfcf;
+  }
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0 10px 0 10px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.05);
+    animation: font_color 5s linear infinite;
 }
