@@ -5,33 +5,32 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 
 hl.monitor({
-  output = "",
-  mode = "preferred",
-  position = "auto",
-  scale = "auto"
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = "auto",
 })
 
 hl.monitor({
-  output = "DP-2",
-  mode = "1920x1080@60",
-  position = "0x0",
-  scale = 1
+	output = "DP-2",
+	mode = "1920x1080@60",
+	position = "0x0",
+	scale = 1,
 })
 
 hl.monitor({
-  output = "DP-1",
-  mode = "2560x1440@165",
-  position = "1920x0",
-  scale = 1
+	output = "DP-1",
+	mode = "2560x1440@165",
+	position = "1920x0",
+	scale = 1,
 })
 
 hl.monitor({
-  output = "HDMI-A-1",
-  mode = "1920x1080@60",
-  position = "4480x0",
-  scale = 1
+	output = "HDMI-A-1",
+	mode = "1920x1080@60",
+	position = "4480x0",
+	scale = 1,
 })
-
 
 -------------------
 ---- AUTOSTART ----
@@ -48,7 +47,6 @@ hl.monitor({
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 
-
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
@@ -58,7 +56,6 @@ hl.monitor({
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-
 
 -----------------------
 ----- PERMISSIONS -----
@@ -83,6 +80,7 @@ hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 ---------------------
 
 require("UIElements")
+require("dynamic-cursor")
 
 -------------------
 ---- AUTOSTART ----

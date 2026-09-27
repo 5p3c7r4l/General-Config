@@ -4,43 +4,48 @@
 
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
-  general = {
-    gaps_in          = 5,
-    gaps_out         = 10,
+	general = {
+		gaps_in = 5,
+		gaps_out = 10,
 
-    border_size      = 2,
+		border_size = 2,
 
-    col              = {
-      active_border   = { colors = { "rgba(702670ee)", "rgba(00000000)", "rgba(afafafee)", "rgba(00000000)" }, angle = 360 },
-      inactive_border = { colors = { "rgba(ffffffee)", "rgba(000000ff)", "rgba(ff0000ee)", "rgba(000000ff)" }, angle = 0 },
-    },
+		col = {
+			active_border = {
+				colors = { "rgba(702670ee)", "rgba(00000000)", "rgba(afafafee)", "rgba(00000000)" },
+				angle = 360,
+			},
+			inactive_border = {
+				colors = { "rgba(ffffffee)", "rgba(000000ff)", "rgba(ff0000ee)", "rgba(000000ff)" },
+				angle = 0,
+			},
+		},
 
-    -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-    resize_on_border = false,
+		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
+		resize_on_border = false,
 
-    -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-    allow_tearing    = false,
+		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+		allow_tearing = false,
 
-    layout           = "dwindle",
-  },
+		layout = "dwindle",
+	},
 
-  decoration = {
-    -- Change transparency of focused and unfocused windows
-    active_opacity   = 1.0,
-    inactive_opacity = 0.9,
+	decoration = {
+		-- Change transparency of focused and unfocused windows
+		active_opacity = 1.0,
+		inactive_opacity = 0.9,
 
-    shadow           = {
-      enabled      = true,
-      range        = 10,
-      render_power = 1000,
-      color        = 0x7f7f7faa,
-    },
+		shadow = {
+			enabled = true,
+			range = 10,
+			render_power = 1000,
+			color = 0x7f7f7faa,
+		},
+	},
 
-  },
-
-  animations = {
-    enabled = true,
-  },
+	animations = {
+		enabled = true,
+	},
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -64,7 +69,6 @@ hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "quick", 
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, bezier = "easeOutQuint", style = "slidefade 50%" })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 2, spring = "default" })
 
-
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
@@ -83,21 +87,21 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
-  dwindle = {
-    preserve_split = true, -- You probably want this
-  },
+	dwindle = {
+		preserve_split = true, -- You probably want this
+	},
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
-  master = {
-    new_status = "master",
-  },
+	master = {
+		new_status = "master",
+	},
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
-  scrolling = {
-    fullscreen_on_one_column = true,
-  },
+	scrolling = {
+		fullscreen_on_one_column = true,
+	},
 })
