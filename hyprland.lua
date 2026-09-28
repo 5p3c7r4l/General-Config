@@ -80,7 +80,6 @@ hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 ---------------------
 
 require("UIElements")
-require("dynamic-cursor")
 
 -------------------
 ---- AUTOSTART ----
@@ -105,3 +104,9 @@ require("keybinds")
 --------------------------------
 
 require("windowRules")
+
+-----------------------
+--- DYNAMIC CURSORS ---
+-----------------------
+
+require("dynamic-cursor")

@@ -63,7 +63,7 @@ hl.config({
 				-- quadratic          - a quadratic function is used
 				-- negative_quadratic - negative version of the quadratic one, feels more aggressive
 				-- see `activation` in `src/mode/utils.cpp` for how exactly the calculation is done
-				activation = "quadratic",
+				activation = "negative_quadratic",
 
 				-- time window (ms) over which the speed is calculated
 				-- higher values will make slow motions smoother but more delayed
